@@ -23,7 +23,7 @@ export default function CoffeeCard({ coffee,coffees,setCoffees }) {
           .then((data) => {
             console.log(data);
             if (data.deletedCount > 0) {
-              Swal.fire("Deleted!", "Your Coffee has been deleted.", "success");
+              Swal.fire("Deleted!","Your Coffee has been deleted.", "success");
               const remaining = coffees.filter(cof => cof._id !== _id);setCoffees(remaining)
             }
           });
